@@ -118,6 +118,6 @@ Single quote (')	-	is yet another flag character. It's used to specify that the 
 
 
 **AUTHOR(S):**
-1.	Immaculata Gregory Etukenyin
-2.	Chioma Victor
+**1.**	**Immaculata Gregory Etukenyin**
+**2.**	**Chioma Victor**
 
