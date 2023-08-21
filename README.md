@@ -1,32 +1,43 @@
-**ALX Africa – Holberton Software Engineering Program’s Printf Group Project.**
+  **ALX Africa – Holberton Software Engineering Program’s Printf Group Project.**
 
 This Readme file is for a group project, handled by my partner; Chioma Victor and I; Immaculata Etukenyin. It is a custom made printf function for the C programming language called _printf that requires writing codes for functions, flags, presicion, size, width, utils, handlers, a test file and prototypes in main.h files. It takes in various inputs and optional arguments based exactly on how the standard library function printf works. My partner and I, submitted this as our first group project for grading as part of our ALX software engineering course requirement.
 
 **OUTLINE**
 
-The _printf() function is a function that produces output according to a given format without making use of the standard library files. It uses a local buffer of 1024 chars in order to call write as little as possible. The printf function handles the custom conversion specifier, the flag characters and length modifiers for non-custom conversion specifiers. The _printf() function returns the total number of characters printed to the stdout(excluding the null byte at the end of strings) after a successful execution.
+**The _printf() function** is a function that produces output according to a given format without making use of the standard library files. It uses a local buffer of 1024 chars in order to call write as little as possible. The printf function handles the custom conversion specifier, the flag characters and length modifiers for non-custom conversion specifiers. The _printf() function returns the total number of characters printed to the stdout(excluding the null byte at the end of strings) after a successful execution.
 
-It uses the prototype int _printf(const char format, ...); This prototype tells us that the "printf" function takes two arguments: a format string and a variable number of arguments. The "..." indicates that the number of arguments is variable. The "const char format" indicates that the first argument is a constant character string that's used to determine how the other arguments are printed. The second argument is a list of additional arguments that are printed according to the format string. So, the "printf" function takes two arguments: a format string and a variable number of other arguments. The printf function takes a format string as an argument, which specifies the layout of the output. The function then iterates through the format string, interpreting the format specifiers and producing output based on them.
+**The prototype int _printf(const char format, ...);** was used, This prototype tells us that the "printf" function takes two arguments: a format string and a variable number of arguments.
+The **"..." indicates** that the number of arguments is variable. The **"const char format" indicates** that the first argument is a constant character string that's used to determine how the other arguments are printed. The second argument is a list of additional arguments that are printed according to the format string. So, the "printf" function takes two arguments: a format string and a variable number of other arguments. The printf function takes a format string as an argument, which specifies the layout of the output. The function then iterates through the format string, interpreting the format specifiers and producing output based on them.
 
 **The Format Specifiers** 
 The format specifiers are characters that begin with a percentage sign (%) and are used to control the output format. There are three different types of format specifiers: string format specifiers, integer format specifiers, and floating-point format specifiers.
 
-Integer format specifiers and their modifiers There are four integer format specifiers: "%d", "%i", "%u", and "%o".
+**Integer format specifiers and their modifiers**
+There are four integer format specifiers: "%d", "%i", "%u", and "%o".
+-  "%d" - this is a decimal format specifier used to output a decimal number. The number can be positive or negative. By default, the output is right-justified, but you can add a field width modifier to specify the minimum width of the output field. You can also add a precision modifier to specify the number of digits after the decimal point.
+-  "%i" - used for integer numbers
+-  "%u" - used for unsigned integer numbers
+-  "%o" - used for octal numbers.
+  
+-  Each format specifier has optional field width and precision modifiers.
+-  The field width modifier is "-n" and the precision modifier is ".".
 
-"%d" - this is a decimal format specifier used to output a decimal number. The number can be positive or negative. By default, the output is right-justified, but you can add a field width modifier to specify the minimum width of the output field. You can also add a precision modifier to specify the number of digits after the decimal point.
-"%i" - used for integer numbers
-"%u" - used for unsigned integer numbers
-"%o" - used for octal numbers.
-Each format specifier has optional field width and precision modifiers. The field width modifier is "-n" and the precision modifier is ".".
-String format specifiers There are three string format specifiers: "%s", "%c", and "%[...]".
 
-"%c" - used to output a single character.
-“%[...]" - used to output a sequence of characters.
-"%s" - used to output a string of characters.
-Each string format specifier can have a field width and precision modifier.
-The field width The field width modifier specifies the minimum number of characters that will be output. It's denoted by a "-n" after the format specifier. Example: "%s-10" means the string will have a minimum width of 10 characters. The output will be padded with spaces if the string is shorter than 10 characters. The field width modifier can also be used with the integer format specifiers to right-justify the output.
+**String format specifiers**
+There are three string format specifiers: "%s", "%c", and "%[...]".
+-  "%c" - used to output a single character.
+-  “%[...]" - used to output a sequence of characters.
+-  "%s" - used to output a string of characters.
+-  Each string format specifier can have a field width and precision modifier.
 
-The precision modifier This is denoted by a "." after the format specifier. For the string format specifiers, the precision modifier specifies the maximum number of characters to output. Example: "%s.10" means the string will be output with a maximum of 10 characters. Any characters beyond the tenth character will be truncated. For the integer format specifiers, the precision modifier specifies the number of digits after the decimal point.
+  
+**The field width**
+The field width modifier specifies the minimum number of characters that will be output. It's denoted by a "-n" after the format specifier. Example: "%s-10" means the string will have a minimum width of 10 characters. The output will be padded with spaces if the string is shorter than 10 characters.
+The field width modifier can also be used with the integer format specifiers to right-justify the output.
+
+
+**The precision modifier**
+This is denoted by a "." after the format specifier. For the **string format specifiers**, the precision modifier specifies the maximum number of characters to output. Example: "%s.10" means the string will be output with a maximum of 10 characters. Any characters beyond the tenth character will be truncated. For the **integer format specifiers**; the precision modifier specifies the number of digits after the decimal point.
 
 
 **The Length Modifiers**
