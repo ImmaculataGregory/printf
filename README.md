@@ -120,6 +120,7 @@ Pointers are a special type of variable that stores the address of another varia
 
 
 **AUTHOR(S):**
+
 **1.**	**Immaculata Gregory Etukenyin**
 
 **2.**	**Chioma Victor**
